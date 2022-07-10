@@ -1,0 +1,218 @@
+.mholder{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 0px;
+    padding-bottom: 50px;
+    user-select: none;
+    position: relative;
+    color: var(--secondary);
+    min-height: 100vh;
+}
+
+.mholder .bio{
+    width: 50%;
+    align-items: flex-start;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-direction: column;
+    transition: all 0.5s ease;
+    padding-left: 60px;
+}
+
+.bio h1{
+    width: 100%;
+    text-align: start;
+    font-size: 50px;
+}
+
+.bio h2{
+    font-size: 35px;
+}
+
+.bio span{
+    color: var(--highlight);
+}
+
+.mholder .theme{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.mholder .theme:hover{
+    cursor: pointer;
+}
+.mholder .logo{
+    position: absolute;
+    left: 40px;
+    top: 20px;
+    font-size: 35px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.mholder .art-body{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-anim{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.scroll{
+    height: 30px;
+    overflow: hidden;
+}
+
+.scroll div{
+    width: 300px;
+    height: 20px;
+    margin-bottom: 30px;
+    text-align: start;
+}
+.text1{
+    animation: scroll 5s linear infinite;
+}
+
+.art-holder{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.laptop{
+  width: 500px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.screen{
+  width: 80%;
+  height: 220px;
+  background: var(--laptop);
+  border-radius: 10px 10px 0 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.onscreen{
+    width: 95%;
+    height: 90%;
+    background-color: black;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 100px;
+    color: white;
+    position: relative;
+}
+
+.onscreen .line{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 5px;
+    background-color: black;
+}
+
+.keyboard{
+    width: 95%;
+    height: 30px;
+    position: relative;
+    background-color: rgb(201, 201, 201);
+    border-bottom-right-radius: 6rem 0.5rem;
+    border-bottom-left-radius: 6rem 0.5rem;
+}
+
+.keyboard::before{
+    display: block;
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 10px;
+    background: #404040;
+    left: calc( 50% - 50px);
+    border-radius: 0 0 20px 20px;
+}
+.keyboard::after{
+    display: block;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    background: #424242;
+    top: 20px;
+    border-bottom-right-radius: 7.5rem 2.5rem;
+    border-bottom-left-radius: 7.5rem 2.5rem;
+}
+
+
+@media screen and (max-width:1000px) {
+    .mholder{
+        flex-direction: column;
+    }
+    .bio h1, .scroll div{
+        text-align: center;
+    }
+    .mholder .bio{
+        width: 100%;
+        align-items: center;
+        padding: 0px 20px;
+    }
+    .mholder .art-body{
+        width: 100%;
+        padding-top: 80px;
+    }
+
+}
+@media screen and (max-width:738px) {
+    .laptop{
+        width: 450px;
+    }
+    .screen{
+        height: 180px;
+    }
+}
+@media screen and (max-width:400px) {
+    .bio h1{
+        font-size: 35px;
+    }
+    .laptop{
+        width: 350px;
+    }
+    .screen{
+        height: 150px;
+    }
+}
+
+@keyframes scroll {
+    0%{margin-top: -200px;}
+    5%{margin-top: -150px;}
+    25%{margin-top: -150px;}
+    30%{margin-top: -100px;}
+    50%{margin-top: -100px;}
+    55%{margin-top: -50px;}
+    75%{margin-top: -50px;}
+    80%{margin-top: 0px;}
+    100%{margin-top: 0px;}
+}

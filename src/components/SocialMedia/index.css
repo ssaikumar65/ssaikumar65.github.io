@@ -1,0 +1,36 @@
+.icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+
+.icons .icon{
+    cursor: pointer;
+    transition: transform ease 0.2s;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    color: var(--secondary);
+}
+.icons .icon:hover{
+    transform: scale(1.5);
+}
+
+.small:hover{
+    color: var(--highlight);
+}
+
+.small{
+    gap: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+@media screen and (hover:none){
+    .icons .icon:hover{
+        transform: none;
+    }
+}

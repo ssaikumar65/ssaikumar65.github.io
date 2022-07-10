@@ -1,0 +1,140 @@
+.pubcomp{
+    display: flex;
+    width: 100%;   
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary);
+    flex-direction: column;
+    user-select: none;
+    color: var(--secondary);
+    padding: 20px 0px;
+    overflow: hidden;
+}
+
+.pubtitle{
+    display: flex;
+    width: 100%;
+    height: 10%;    
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.pubholder{
+    display: flex;
+    width: 100%;
+    height: 90%;    
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0px;
+}
+
+.publication{
+    width: clamp(78%, 900px, 70%);
+    background-color: var(--secondary);
+    border-radius: 10px;
+    padding: 30px;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 1px 1px 20px var(--highlight);
+}
+
+.publication .desc{
+    width: 50%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.publication .images{
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+    margin: 20px 0px;
+
+}
+
+.images .image{
+    transition: transform 0.2s ease;
+    border: 2px solid var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 4px;
+}
+
+.images .image:hover{
+    transform: scale(1.16);
+    cursor: pointer;
+}
+
+.publication .pubbutton{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.desc span{
+    color: var(--highlight);
+    font-weight: bolder;
+}
+
+.pubbutton .button{
+    width: 150px;
+    border: 2px solid var(--primary);
+    border-radius: 10px;
+    padding: 10px;
+    color: var(--primary);
+}
+
+.pubbutton .button:hover{
+    background-color: var(--primary);
+    color: var(--secondary);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.publication p{
+    font-size: 17px;
+    font-weight: bold;
+}
+
+@media screen and (max-width:1300px) {
+    .publication{
+        flex-direction: column;
+        padding: 15px;
+    }
+    .publication .desc{
+        padding: 10px 0px;
+        align-items: center;
+        width: 100%;
+    }
+    .publication .pubbutton{
+        padding: 20px 0px;
+        width: 100%;
+        margin-left: 0px;
+    }
+}
+.pubbutton a{
+    border: none;
+    outline: none;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+@media screen and (max-width:900px) {
+    .publication .desc{
+        align-items: center;
+    }
+}

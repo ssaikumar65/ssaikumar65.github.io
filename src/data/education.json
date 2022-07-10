@@ -1,0 +1,30 @@
+[
+    {
+        "id":1,
+        "place":"TCS",
+        "date":"September 2020 - Present",
+        "role":"Assistant System Engineer",
+        "align":"right"
+    },
+    {
+        "id":2,
+        "place":"Gayatri Vidya Parishad",
+        "date":"2016 - 2020",
+        "role":"Bachelor of Technology C.S.E.",
+        "align":"left"
+    },
+    {
+        "id":3,
+        "place":"Narayana Jr. College",
+        "date":"2014 - 2016",
+        "role":"Board of Intermediate",
+        "align":"right"
+    },
+    {
+        "id":4,
+        "place":"P.E.N. School",
+        "date":"Passed out in 2014",
+        "role":"SSC",
+        "align":"left"
+    }
+]

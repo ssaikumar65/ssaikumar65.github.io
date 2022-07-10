@@ -1,0 +1,154 @@
+.qcomp{
+    display: flex;
+    width: 100%;   
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary);
+    flex-direction: column;
+    user-select: none;
+    padding: 20px 0px;
+    color: var(--secondary);
+    overflow: hidden;
+}
+.qtitle{
+    display: flex;
+    width: 100%;
+    height: 10%;    
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.qholder{
+    display: flex;
+    width: 100%;
+    height: 90%;    
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 40px 10px;
+}
+
+.timeline{
+    position: relative;
+    width: 100%;
+}
+
+.timeline::after{
+    content: "";
+    position: absolute;
+    width: 10px;
+    background-color: var(--highlight);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+}
+
+.timeline .card{
+    width: 40%;
+    background-color: var(--secondary);
+    position: relative;
+    transition: all 0.5s ease;
+    margin: 40px 0px;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    border-radius: 10px;
+    color: var(--primary);
+    box-shadow: 1px 1px 20px var(--highlight);
+}
+.timeline .card:hover{
+    animation: wobble 0.5s ease;
+}
+
+.timeline .left{
+    left:calc(10% - 10px);
+}
+.card p, .card h3, .card h4 {
+    margin: 3px 0px;
+}
+
+.timeline .left::before {
+    content: " ";
+    position: absolute;
+    right: -10px;
+    border: medium solid var(--secondary);
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent var(--secondary);
+}
+.timeline .right::before {
+    content: " ";
+    position: absolute;
+    left: -20px;
+    border: medium solid var(--secondary);
+    border: 10px solid;
+    border-color: transparent var(--secondary) transparent transparent;
+}
+.timeline .right{
+    left:calc(50% + 20px);
+}
+
+@media screen and (max-width: 738px) {
+    .timeline .card{
+        width: 80%;
+    }
+    .timeline::after{
+        left: 40px;
+        transform: translateX(-20px);
+    }
+    .timeline .left, .timeline .right{
+        left:60px;
+        transform: translateX(-20px);
+    }
+    .timeline .left::before,.timeline .right::before{
+        border: 10px solid ;
+        border-color: transparent var(--secondary) transparent transparent;
+        right: 100%;
+    }
+}
+
+@keyframes wobble {
+    0% {
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none
+      }
+      15% {
+        -webkit-transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -3deg);
+        -ms-transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -3deg);
+        transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -3deg)
+      }
+      30% {
+        -webkit-transform: translate3d(4%, 0, 0) rotate3d(0, 0, 1, 3deg);
+        -ms-transform: translate3d(4%, 0, 0) rotate3d(0, 0, 1, 3deg);
+        transform: translate3d(4%, 0, 0) rotate3d(0, 0, 1, 3deg)
+      }
+      45% {
+        -webkit-transform: translate3d(-3%, 0, 0) rotate3d(0, 0, 1, -2deg);
+        -ms-transform: translate3d(-3%, 0, 0) rotate3d(0, 0, 1, -2deg);
+        transform: translate3d(-3%, 0, 0) rotate3d(0, 0, 1, -2deg)
+      }
+      60% {
+        -webkit-transform: translate3d(2%, 0, 0) rotate3d(0, 0, 1, 2deg);
+        -ms-transform: translate3d(2%, 0, 0) rotate3d(0, 0, 1, 2deg);
+        transform: translate3d(2%, 0, 0) rotate3d(0, 0, 1, 2deg)
+      }
+      75% {
+        -webkit-transform: translate3d(0, 0, 0) rotate3d(0, 0, 1, 0deg);
+        -ms-transform: translate3d(0, 0, 0) rotate3d(0, 0, 1, 0deg);
+        transform: translate3d(0, 0, 0) rotate3d(0, 0, 1, 0deg)
+      }
+      100% {
+        -webkit-transform: translate3d(1, 0, 0) rotate3d(0, 0, 1, 0deg);
+        -ms-transform: translate3d(1, 0, 0) rotate3d(0, 0, 1, 0deg);
+        transform: translate3d(1, 0, 0) rotate3d(0, 0, 1, 0deg)
+      }
+}
+
+
