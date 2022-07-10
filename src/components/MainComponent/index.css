@@ -203,6 +203,9 @@
     .screen{
         height: 150px;
     }
+    .onscreen{
+        font-size: 70px;
+    }
 }
 
 @keyframes scroll {
