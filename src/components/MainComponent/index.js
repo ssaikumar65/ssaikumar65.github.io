@@ -27,10 +27,10 @@ const MainComponent = () => {
   var day="Good Day!";
   var today = new Date(),
   time = today.getHours();
-  if(time>=5 && time<=12){
+  if(time>=5 && time<=11){
     day="Good Morning";
   }
-  else if(time>=13 && time<=16){
+  else if(time>=12 && time<=16){
     day="Good Afternoon";
   }
   else if(time>=17 && time<=20){
@@ -60,6 +60,11 @@ const MainComponent = () => {
     setDate(new Date());
   }
 
+  function addZero(d) {
+    if (d < 10) {d = "0" + d}
+    return d;
+  }
+
 
   return (
         <div className="mholder">
@@ -86,7 +91,7 @@ const MainComponent = () => {
             <div className="laptop">
               <div className="screen">
                 <div className="onscreen">
-                {date.getHours()} : {date.getMinutes()}
+                {date.getHours()} : {addZero(date.getMinutes())}
                 <div className="line"></div>
                 </div>
               </div>

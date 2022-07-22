@@ -1,4 +1,3 @@
-import './App.css';
 import MainComponent from './components/MainComponent';
 import FooterComponent from './components/FooterComponent';
 import SkillsComponent from './components/SkillsComponent';
@@ -11,7 +10,7 @@ import 'aos/dist/aos.css';
 AOS.init();
 function App() {
   return (
-    <div className="App">
+    <div>
       <MainComponent/>
       <AboutComponent/>
       <QualificationsComponent/>
